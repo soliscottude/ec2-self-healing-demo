@@ -1,0 +1,46 @@
+{
+  "timestamp": "2025-11-19T00:29:33.589174Z",
+  "alarm_name": "HighCPU-ec2-self-healing-demo",
+  "new_state": "ALARM",
+  "reason": "Threshold Crossed: 1 out of the last 1 datapoints [0.13121641240958676 (19/11/25 00:25:00)] was greater than the threshold (0.1) (minimum 1 datapoint for OK -> ALARM transition).",
+  "instance_id": "i-0359668667c3a8db2",
+  "region": "Asia Pacific (Sydney)",
+  "raw_alarm_message": {
+    "AlarmName": "HighCPU-ec2-self-healing-demo",
+    "AlarmDescription": null,
+    "AWSAccountId": "879794963886",
+    "AlarmConfigurationUpdatedTimestamp": "2025-11-19T00:28:27.454+0000",
+    "NewStateValue": "ALARM",
+    "NewStateReason": "Threshold Crossed: 1 out of the last 1 datapoints [0.13121641240958676 (19/11/25 00:25:00)] was greater than the threshold (0.1) (minimum 1 datapoint for OK -> ALARM transition).",
+    "StateChangeTime": "2025-11-19T00:29:32.675+0000",
+    "Region": "Asia Pacific (Sydney)",
+    "AlarmArn": "arn:aws:cloudwatch:ap-southeast-2:879794963886:alarm:HighCPU-ec2-self-healing-demo",
+    "OldStateValue": "OK",
+    "OKActions": [],
+    "AlarmActions": [
+      "arn:aws:sns:ap-southeast-2:879794963886:ec2-self-healing-alert"
+    ],
+    "InsufficientDataActions": [],
+    "Trigger": {
+      "MetricName": "CPUUtilization",
+      "Namespace": "AWS/EC2",
+      "StatisticType": "Statistic",
+      "Statistic": "AVERAGE",
+      "Unit": null,
+      "Dimensions": [
+        {
+          "value": "i-0359668667c3a8db2",
+          "name": "InstanceId"
+        }
+      ],
+      "Period": 60,
+      "EvaluationPeriods": 1,
+      "DatapointsToAlarm": 1,
+      "ComparisonOperator": "GreaterThanThreshold",
+      "Threshold": 0.1,
+      "TreatMissingData": "missing",
+      "EvaluateLowSampleCountPercentile": ""
+    }
+  },
+  "action_taken": "WOULD_REBOOT"
+}
